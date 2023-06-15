@@ -1,0 +1,108 @@
+.target {
+  width: 100%;
+  min-height: 600px;
+  margin-top: 50px;
+  padding: 0 100px 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  color: #ffffff;
+  text-align: center;
+}
+.title > b {
+  color: #ffd600;
+}
+.description {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  color: #ffffff;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(324px, 0fr));
+  gap: 20px;
+  width: 100%;
+  position: relative;
+}
+.item {
+  /* justify-content: center; */
+  align-items: center;
+  padding: 45px 25px;
+  gap: 30px;
+
+  /* width: 344px; */
+  height: 426px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+.item:hover:nth-child(1) {
+  position: absolute;
+  width: 344px; /* Add width: inherit to maintain the same width as the parent */
+  z-index: 12;
+  height: 698px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #ffd600;
+  box-shadow: inset 0px 0px 250px rgba(255, 214, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+.item:hover:nth-child(2) {
+  left: 400px;
+  position: absolute;
+  width: 344px; /* Add width: inherit to maintain the same width as the parent */
+  z-index: 12;
+  height: 698px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #ffd600;
+  box-shadow: inset 0px 0px 250px rgba(255, 214, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}.item:hover:nth-child(2) {
+  position: absolute;
+  width: 344px; /* Add width: inherit to maintain the same width as the parent */
+  z-index: 12;
+  height: 698px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #ffd600;
+  box-shadow: inset 0px 0px 250px rgba(255, 214, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.logo {
+  align-self: center;
+}
+.name {
+  width: 108px;
+  height: 36px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffd600;
+  text-align: center;
+}
+.comment {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}

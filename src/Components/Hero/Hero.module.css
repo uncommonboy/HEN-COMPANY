@@ -1,0 +1,58 @@
+.hero {
+  width: 100%;
+  min-height: 650px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+}
+
+.infos {
+  position: absolute;
+  z-index: 21212121;
+  margin-left: 90px;
+}
+.title {
+  max-width: 536px;
+  height: 170px;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 85px;
+  color: #ffffff;
+  /* z-index: 15; */
+  margin-bottom: 30px;
+}
+.description {
+    margin-bottom: 50px;
+  width: 755px;
+  /* left: 97px;
+  top: 446px; */
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+}
+.button {
+  padding: 6px 73px;
+  max-width: 200px;
+  height: 50px;
+  background: #ffd600;
+  border-radius: 150px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 38px;
+  color: #1f2022;
+}
