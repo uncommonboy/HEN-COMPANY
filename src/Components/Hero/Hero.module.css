@@ -9,16 +9,26 @@
 
 .img {
   width: 100%;
-  height: 100%;
+  height: 750px;
+  margin-bottom: 104px;
   position: absolute;
   z-index: 11;
+  object-fit: cover; /* Add this property */
 }
 
 .infos {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   z-index: 21212121;
   margin-left: 90px;
+  @media (max-width: 767px) {
+    margin-left: 0px;
+    justify-content:center;
+    align-items:center;
+  }
 }
+
 .title {
   max-width: 536px;
   height: 170px;
@@ -30,10 +40,21 @@
   color: #ffffff;
   /* z-index: 15; */
   margin-bottom: 30px;
+  @media (max-width: 767px) {
+    text-align: center;
+    line-height: 60px;
+  }
+  @media (max-width: 320px) {
+    width:200px;
+    padding-bottom:250px;
+    padding-top:40px;
+    font-size:40px
+  }
 }
+
 .description {
-    margin-bottom: 50px;
-  width: 755px;
+  margin-bottom: 50px;
+  max-width: 755px;
   /* left: 97px;
   top: 446px; */
   color: #ffffff;
@@ -42,7 +63,19 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 38px;
+  @media (max-width: 767px) {
+    text-align: center;
+    line-height: 25px;
+    font-size:22px;
+  }
+  @media (max-width: 455px) {
+    text-align: center;
+    line-height: 23px;
+    font-size:21px;
+    padding-top:45px;
+  }
 }
+
 .button {
   padding: 6px 73px;
   max-width: 200px;
@@ -55,4 +88,8 @@
   font-size: 18px;
   line-height: 38px;
   color: #1f2022;
+  display: flex;
+  align-self: center;
+  justify-content: center; /* Added to horizontally center the content */
+  align-items: center; /* Added to vertically center the content */
 }

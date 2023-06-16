@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.css";
+import { Link } from "react-router-dom";
 import backgroundImg from "./image 13.png";
 
 function Hero() {
@@ -15,7 +16,9 @@ function Hero() {
           An invite-only app for political and professional exchange. Register
           now for the free beta version!
         </div>
-        <button className={styles.button}>Apply</button>
+        <Link to='/registration'>
+          <button className={styles.button}>Apply</button>
+        </Link>
       </div>
     </section>
   );

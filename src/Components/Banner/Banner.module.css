@@ -1,25 +1,27 @@
 .Banner {
-  min-height: 403px;
+  min-height: auto; /* Remove the fixed min-height */
   width: 100%;
   position: relative;
   margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items vertically */
 }
+
 .img {
   width: 100%;
-  height: 100%;
+  height: 100%; 
   position: absolute;
+  object-fit: cover;
 }
+
 .title {
-  position: absolute;
-  height: 160px;
-  margin-top: 120px;
+  position: relative; /* Change to relative positioning */
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
   line-height: 80px;
-
   text-align: center;
-
   color: #ffffff;
 }

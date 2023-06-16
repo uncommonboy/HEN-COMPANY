@@ -5,6 +5,12 @@
   display: flex;
   margin-top: 100px;
   padding: 41px 100px 72px 98px;
+  @media (max-width: 767px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px 50px 20px;
+  }
 }
 /* .left{
 
@@ -14,6 +20,8 @@
   width: 35.71px;
   height: 60px;
   margin-bottom: 5px;
+  align-self: center;
+  display: flex;
 }
 .logo > img {
   width: 100%;
@@ -25,7 +33,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
-  /* text-align: center; */
+  text-align: center;
   color: #ffffff;
 }
 .small {
@@ -34,7 +42,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 30px;
-  /* text-align: center; */
+  text-align: center;
   color: #ffffff;
 }
 
@@ -42,17 +50,32 @@
   display: flex;
   margin-left: 130px;
   gap: 90px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-left: 0px;
+    gap:20px;
+  }
 }
 .col {
   gap: 4px;
+  text-align: center;
+ 
 }
 .right {
   margin-left: 230px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-left: 0px;
+    gap:20px;
+    align-items:center;
+  }
 }
 .logos {
   display: flex;
   gap: 15px;
   margin-top: 10px;
+  text-align: center;
+
 }
 .logo2 {
   padding: 5px;

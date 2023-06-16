@@ -6,6 +6,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 767px) {
+    padding-left: 20px;
+    padding-right:20px;
+  }
 }
 .title {
   font-family: "Playfair Display";
@@ -30,50 +34,33 @@
 }
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(324px, 0fr));
+  grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
   gap: 20px;
-  width: 100%;
+  /* width: 100%; */
   position: relative;
+   justify-content: center;
+  /* align-items: center;   */
 }
+
 .item {
-  /* justify-content: center; */
   align-items: center;
   padding: 45px 25px;
   gap: 30px;
-
-  /* width: 344px; */
   height: 426px;
   display: flex;
   position: relative;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 10px;
+  /* @media (max-width: 767px) {
+    max-width: 300px;
+    padding:0;
+    min-height: 280px;
+  } */
 }
-.item:hover:nth-child(1) {
-  position: absolute;
-  width: 344px; /* Add width: inherit to maintain the same width as the parent */
-  z-index: 12;
-  height: 698px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #ffd600;
-  box-shadow: inset 0px 0px 250px rgba(255, 214, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-}
-.item:hover:nth-child(2) {
-  left: 400px;
-  position: absolute;
-  width: 344px; /* Add width: inherit to maintain the same width as the parent */
-  z-index: 12;
-  height: 698px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #ffd600;
-  box-shadow: inset 0px 0px 250px rgba(255, 214, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-}.item:hover:nth-child(2) {
-  position: absolute;
-  width: 344px; /* Add width: inherit to maintain the same width as the parent */
+.item:hover {
+  position: relative;
+  /* width: 344px; Add width: inherit to maintain the same width as the parent */
   z-index: 12;
   height: 698px;
   background: rgba(255, 255, 255, 0.02);

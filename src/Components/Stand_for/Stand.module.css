@@ -19,6 +19,7 @@
 .title > b {
   color: #ffd600;
 }
+
 .description {
   font-family: "Gilroy";
   font-style: normal;
@@ -30,23 +31,19 @@
 }
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(344px, 0fr));
-  gap: 40px;
-  margin-left: 25px;
-  width: 100%;
-  justify-items: center; /* centers items horizontally */
-  align-items: center; /* centers items vertically */
+  grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+  gap: 20px;
+  position: relative;
+   justify-content: center;
 }
 
 .item {
-  justify-content: center;
   align-items: center;
   padding: 45px 25px;
   gap: 30px;
-
-  width: 344px;
   height: 426px;
   display: flex;
+  position: relative;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 10px;

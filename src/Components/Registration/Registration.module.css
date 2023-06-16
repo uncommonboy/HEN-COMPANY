@@ -1,0 +1,131 @@
+.registration {
+  width: 100%;
+  min-height: 700px;
+  position: relative;
+}
+.registration > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.title {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12;
+  position: absolute;
+}
+.title > b {
+  max-width: 474px;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+  color: #ffffff;
+  padding-left: 50px;
+}
+.form {
+  width: 50%;
+  height: 100%;
+  padding-top: 30px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 12;
+  position: absolute;
+  bottom: 0px;
+  right:0px;
+  backdrop-filter: blur(20px);
+}
+.inputs {
+  display: flex;
+  gap: 22px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.inp {
+  max-width: 294px;
+  height: 50px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 13px 0px 13px 10px;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  z-index: 1222;
+}
+.inp::placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #dadada;
+  opacity: 0.5;
+}
+.textArea {
+  background: #1e1e1e;
+  border-radius: 10px;
+  color: #ffffff;
+width: 70%;
+height:155px;
+  padding: 5px 5px 5px 5px;
+}
+.textArea::placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #dadada;
+  opacity: 0.5;
+}
+.selections {
+  width: 100%;
+}
+.selection {
+  max-width: 530px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #7c7c7c;
+}
+.checkbox {
+  height: 100%;
+}
+.checkbox2 {
+  border: 1px solid #ffd600;
+}
+.text{
+    font-size: 13px;
+    padding-left: 10px;
+}
+.text > span {
+  color: #ffd600;
+  text-decoration: underline;
+}
+.apply {
+  width: 250px;
+  height: 50px;
+  background: #ffd600;
+  border-radius: 150px;
+  align-self: center;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  color: #1e1e1e;
+}

@@ -3,6 +3,9 @@
   width: 100%;
   padding: 0 119px;
   margin-top: 150px;
+  @media (max-width:767px) {
+    padding:0 50px;
+  }
 }
 .title {
   font-family: "Playfair Display";
@@ -25,6 +28,10 @@
   position: absolute;
   padding: 0 80px;
   width: 100%;
+  @media (max-width: 767px) {
+    position: static;
+    padding:0px;
+  }
 }
 .itemsAll {
   display: flex;
@@ -32,6 +39,9 @@
   width: 100%;
   margin-top: 130px;
   justify-content: space-between;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 .itemsCol {
   height: 100%;
@@ -39,9 +49,12 @@
   flex-direction: column;
   gap: 200px;
   justify-content: space-between;
+  @media (max-width: 767px) {
+    padding-top: 10px;
+    gap: 50px;
+  }
 }
-/* .item {
-} */
+
 .name {
   font-family: "Poppins";
   font-style: normal;
@@ -49,6 +62,9 @@
   font-size: 24px;
   line-height: 36px;
   color: #ffd600;
+  @media (max-width: 767px) {
+    text-align:center;
+  }
 }
 .description {
   width: 265px;
@@ -59,4 +75,8 @@
   font-size: 18px;
   line-height: 30px;
   color: #ffffff;
+  @media (max-width: 767px) {
+    width: 100%;
+    text-align:center;
+  }
 }
