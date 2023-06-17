@@ -2,6 +2,10 @@
   width: 100%;
   min-height: 700px;
   position: relative;
+  display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 .registration > img {
   width: 100%;
@@ -13,10 +17,16 @@
   width: 50%;
   height: 100%;
   display: flex;
+  margin-top: 150px;
   align-items: center;
   justify-content: center;
   z-index: 12;
-  position: absolute;
+  position: relative;
+  @media (max-width: 767px) {
+    backdrop-filter: blur(20px);
+    width: 100%;
+    text-align: center;
+  }
 }
 .title > b {
   max-width: 474px;
@@ -27,6 +37,10 @@
   line-height: 48px;
   color: #ffffff;
   padding-left: 50px;
+
+  @media (max-width: 767px) {
+    padding-left: 10px;
+  }
 }
 .form {
   width: 50%;
@@ -37,22 +51,37 @@
   flex-direction: column;
   gap: 20px;
   z-index: 12;
-  position: absolute;
+  position: relative;
   bottom: 0px;
-  right:0px;
+  right: 0px;
   backdrop-filter: blur(20px);
+  @media (max-width: 767px) {
+    width: 100%;
+    padding-left: 0px;
+    align-items: center;
+  }
 }
 .inputs {
   display: flex;
+  width: 100%;
   gap: 22px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .col {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  @media (max-width: 767px) {
+    padding: 0 20px;
+    align-items: center;
+  }
 }
 .inp {
-  max-width: 294px;
+  /* max-width: 294px; */
   height: 50px;
   background: #1e1e1e;
   border-radius: 10px;
@@ -64,6 +93,9 @@
   font-size: 16px;
   line-height: 24px;
   z-index: 1222;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 .inp::placeholder {
   font-family: "Poppins";
@@ -78,9 +110,13 @@
   background: #1e1e1e;
   border-radius: 10px;
   color: #ffffff;
-width: 70%;
-height:155px;
+  width: 70%;
+  height: 155px;
   padding: 5px 5px 5px 5px;
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 .textArea::placeholder {
   font-family: "Poppins";
@@ -109,9 +145,9 @@ height:155px;
 .checkbox2 {
   border: 1px solid #ffd600;
 }
-.text{
-    font-size: 13px;
-    padding-left: 10px;
+.text {
+  font-size: 13px;
+  padding-left: 10px;
 }
 .text > span {
   color: #ffd600;

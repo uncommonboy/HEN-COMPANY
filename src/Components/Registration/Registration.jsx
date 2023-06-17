@@ -5,9 +5,11 @@ const Registration = () => {
   return (
     <section className={styles.registration}>
       <img src={imgBackground} alt="" />
+
       <div className={styles.title}>
         <b> Apply now for free membership to be one of our first users!</b>
       </div>
+
       <div className={styles.form}>
         <div className={styles.inputs}>
           <div className={styles.col}>
@@ -85,6 +87,7 @@ const Registration = () => {
         </div>
         <button className={styles.apply}>Apply for Membership</button>
       </div>
+
     </section>
   );
 };
