@@ -1,0 +1,112 @@
+.invitation {
+  width: 100%;
+  padding: 7px 90px 0px 80px;
+}
+.back {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 37px 0px;
+  color: #ffffff;
+  @media (max-width: 767px) {
+    padding: 0 0 20px 43px;
+  }
+}
+.notification {
+  border-radius: 10px;
+  background: #222;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 18px 40px;
+}
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.banner {
+  width: 100%;
+  margin: 50px 0px 50px 0;
+}
+.title {
+  color: #fff;
+  font-size: 40px;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  padding-bottom: 30px;
+}
+.comment > div:nth-child(1) {
+  padding-bottom: 40px;
+}
+.comment {
+  color: #fff;
+  padding-top: 30px;
+  font-size: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+}
+@media (max-width: 767px) {
+  .title{
+    font-size: 35px;
+  }
+  .invitation {
+    margin-top: 100px;
+    padding: 7px 40px 0px 30px;
+  }
+  .left,
+  .right {
+    border-radius: 10px;
+    background: #222;
+    display: flex;
+    color: #ffffff;
+    padding-left: 10px;
+    height: 50px;
+    width: 47%;
+  }
+  .notification {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 0;
+  }
+  .comment{
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .comment > div:nth-child(1) {
+    padding-bottom: 20px;
+  }
+  .comment > div:nth-child(2) {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width:350px) {
+  .title{
+    font-size: 25px;
+  }
+  .invitation {
+    margin-top: 100px;
+    padding: 7px 20px 0px 10px;
+  }
+}
