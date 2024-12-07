@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -8,12 +8,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import img from "./Group 39.svg";
-import styles from './SideBar.module.css'
-import zIndex from "@mui/material/styles/zIndex";
+import styles from "./SideBar.module.css";
+
 export default function TemporaryDrawer() {
-  const [state, setState] = React.useState({
-    left: false,
-  });
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -22,8 +20,10 @@ export default function TemporaryDrawer() {
     ) {
       return;
     }
+    setIsOpen(open);
 
-    setState({ ...state, left: open });
+    // Disable body scrolling when menu is open
+    document.body.style.overflow = open ? "hidden" : "auto";
   };
 
   const list = () => (
@@ -32,64 +32,87 @@ export default function TemporaryDrawer() {
         width: 250,
         backgroundColor: "black",
         color: "white",
+        height: "100%",
+        position: "relative",
       }}
       role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)} // Handle keyboard events to close the drawer
     >
       <List className={styles.header}>
-        <NavLink to="/">
+        <NavLink to="/" className={styles.navLink} onClick={() => setIsOpen(false)}>
           <ListItem>
-            <img className="logo" src={img} alt="" />
+            <img className={styles.logo} src={img} alt="Logo" />
           </ListItem>
         </NavLink>
-        <NavLink to="/">
-          <ListItem>
-            <CloseIcon />
-          </ListItem>
-        </NavLink>
+        <ListItem
+          button
+          onClick={() => setIsOpen(false)}
+          sx={{ justifyContent: "flex-end", color: "white" }}
+        >
+          <CloseIcon />
+        </ListItem>
       </List>
-      <Divider />
+      <Divider sx={{ borderColor: "gray" }} />
       <List>
-        <NavLink to="/investors">
-          <ListItem>For investors</ListItem>
+        <NavLink
+          to="/investors"
+          className={styles.navLink}
+          onClick={() => setIsOpen(false)} // Close drawer when link is clicked
+        >
+          <ListItem button>For Investor</ListItem>
         </NavLink>
-        <NavLink to="heh-news">
-          <ListItem>HEH news</ListItem>
+        <NavLink
+          to="/heh-news"
+          className={styles.navLink}
+          onClick={() => setIsOpen(false)} // Close drawer when link is clicked
+        >
+          <ListItem button>HEH News</ListItem>
         </NavLink>
-        <NavLink to="heh-foundation">
-          <ListItem>HEH foundation</ListItem>
+        <NavLink
+          to="/heh-foundation"
+          className={styles.navLink}
+          onClick={() => setIsOpen(false)} // Close drawer when link is clicked
+        >
+          <ListItem button>HEH Foundation</ListItem>
         </NavLink>
-        <NavLink to="received-invitation">
-          <ListItem>Received invitation</ListItem>
+        <NavLink
+          to="/received-invitation"
+          className={styles.navLink}
+          onClick={() => setIsOpen(false)} // Close drawer when link is clicked
+        >
+          <ListItem button>Received Invitation</ListItem>
         </NavLink>
       </List>
     </Box>
   );
 
   return (
-    <div style={{ display: "flex" }}>
-      <Box sx={{ flexGrow: 1 }}>
-        {/* Rest of the page content */}
-      </Box>
-      <button onClick={toggleDrawer(true)} className={styles.menu}>
+    <div className={styles.root}>
+      <button
+        onClick={toggleDrawer(true)}
+        className={styles.menu}
+        aria-label="Open Menu"
+      >
         <MenuIcon />
       </button>
       <Drawer
-        anchor="left" 
-        open={state.left}
+        anchor="left"
+        open={isOpen}
         onClose={toggleDrawer(false)}
         sx={{
           "& .MuiDrawer-paper": {
             backgroundColor: "black",
             color: "white",
-            width: '100%',
-            position:'absolute',
-            zIndex:22222222222
+            width: "100%",
+            zIndex: 1300,
+            position: "fixed",
+            overflow: "hidden",
           },
         }}
+        ModalProps={{
+          keepMounted: true, // Improves performance when the drawer is closed
+        }}
       >
-
         {list()}
       </Drawer>
     </div>

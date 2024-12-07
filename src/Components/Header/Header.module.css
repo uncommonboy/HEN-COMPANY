@@ -4,11 +4,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 7px 90px 0px 80px;
-  z-index: 2222;
+  z-index: 10; /* Adjust z-index to avoid excessively high values */
   position: relative;
+  background-color: #000; /* Ensure the header has a background if it's floating */
   @media (max-width: 767px) {
     padding-right: 30px;
-    padding-left:40px;
+    padding-left: 40px;
   }
   @media (max-width: 350px) {
     padding-left: 10px;
@@ -16,24 +17,24 @@
 }
 
 .logo {
+  width: 100%; /* Make logo responsive */
+  max-width: 120px; /* Adjust max-width to fit logo */
   @media (max-width: 767px) {
     width: 25px;
     height: 42px;
   }
 }
-/* @media (max-width: 767px) {
-   
-} */
+
 .links {
   display: flex;
   gap: 60px;
   @media (max-width: 767px) {
-    display: none;
+    display: none; /* Ensure links are hidden for mobile */
   }
 }
 
 .link {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

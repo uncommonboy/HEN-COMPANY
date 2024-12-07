@@ -1,36 +1,42 @@
-.sidebar {
-  width: 250px;
-  background-color: black;
-  color: white;
+.root {
+  position: relative;
+  z-index: 1200;
 }
 
 .header {
   padding-top: 16px;
   padding-bottom: 16px;
   display: flex;
-  width: 100%;
   justify-content: space-between;
 }
+
 .menu {
   width: 30px;
   color: #ffd600;
   font-size: 0px;
   background-color: transparent;
   padding-top: 10px;
-  @media (min-width: 767px) {
-    display: none;
-  }
 }
 
-/* .menuButton {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background-color: transparent;
-  border: none;
+.navLink {
+  text-decoration: none;
   color: white;
-} */
+}
 
-.drawerPaper {
-  width: 100%;
+.navLink:hover {
+  color: #ffd600;
+}
+
+.logo {
+  height: 40px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1299; /* Below the drawer */
 }
